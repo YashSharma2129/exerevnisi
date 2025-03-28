@@ -15,8 +15,8 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path='/noticeboard' element={<NoticeBoard />} />
         <Route path='/' element={<LandingPage />} />
-        <Route path='/blog2' element={<Blog />} />
-
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/blog2' element={<Blog2 />} />
       </Routes>
     </Router>
   );
