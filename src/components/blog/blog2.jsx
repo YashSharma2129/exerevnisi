@@ -170,7 +170,6 @@ const Blog2 = () => {
 
     const navigate = useNavigate();
 
-    // Create refs specifically for headings
     const productStrategyHeadingRef = useRef(null);
     const learningHeadingRef = useRef(null);
     const assessingHeadingRef = useRef(null);
@@ -180,27 +179,32 @@ const Blog2 = () => {
         navigate('/signup');
     }
 
-    // Improved scroll to heading function
+    const handlelanding=()=>{
+        navigate('/')
+    }
+
     const scrollToHeading = (headingRef) => {
         if (headingRef.current) {
-            // Adjust scroll position to account for header/navbar height
-            const yOffset = -220; // Adjust this value based on your header/navbar height
+            const yOffset = -220;
             const element = headingRef.current;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             
             window.scrollTo({ top: y, behavior: 'smooth' });
-            setShowSidebar(false); // Close sidebar on mobile after selection
+            setShowSidebar(false); 
         }
     }
 
     return (
         <div className="min-h-screen bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
-                <header className="flex flex-col md:flex-row justify-between items-center py-6">
-                    <h1 className="text-2xl font-bold text-gray-900">
-                        <span className="text-gray-500">STUDY</span>table
-                    </h1>
+            <header className="flex flex-col md:flex-row justify-between items-center py-6">
+          <h1
+            onClick={handlelanding}
+            className="text-2xl font-bold cursor-pointer transition duration-300 hover:opacity-80 select-none"
+          >
+            <span className="text-gray-800">STUDY</span>
+            <span className="text-gray-900">table</span>
+          </h1>
                     <div className="sticky top-0 bg-gray-50 z-10">
                         <button onClick={handleadmission} className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 mt-4 md:mt-0 md:order-last max-sm:py-1 max-sm:px-3 ">
                             Apply for admission
@@ -208,9 +212,7 @@ const Blog2 = () => {
                     </div>
                 </header>
 
-                {/* Main Content */}
                 <div className="flex flex-col md:flex-row gap-6">
-                    {/* Sidebar */}
                     <aside className="w-full md:w-1/4 bg-gray-50 shadow-sm rounded-lg p-4 hidden md:block">
                         <h2 className="text-lg font-semibold text-blue-600">Overview</h2>
                         <ul className="mt-4 space-y-2 text-gray-600">
