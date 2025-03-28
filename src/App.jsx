@@ -4,7 +4,7 @@ import NameSignup from './components/NameSignup';
 import LandingPage from './components/landing/LandingPage'
 import Signin from './components/Signin';
 import NoticeBoard from './components/Notice/noticeboard';
-import BlogPage from "./components/blog/Blog.jsx";
+import Blog2 from "./components/blog/Blog2.jsx";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route path="/signup" element={<NameSignup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path='/noticeboard' element={<NoticeBoard />} />
-        <Route path='/blog' element={<BlogPage />} />
+        <Route path='/blog' element={<Blog2 />} />
         <Route path='/' element={<LandingPage />} />
       </Routes>
     </Router>
