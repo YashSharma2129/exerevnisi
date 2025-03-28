@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../footer";
 import { useNavigate } from "react-router-dom";
 
-const Blog = () => {
+const BlogPage = () => {
 
     const navigate = useNavigate();
 
@@ -124,4 +124,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default BlogPage;
