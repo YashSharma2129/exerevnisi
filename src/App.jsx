@@ -4,7 +4,7 @@ import NameSignup from './components/NameSignup';
 import LandingPage from './components/landing/LandingPage'
 import Signin from './components/Signin';
 import NoticeBoard from './components/Notice/noticeboard';
-import BlogPage from "./components/blog/blog.jsx";
+import BlogPage from "./components/blog/Blog.jsx";
 
 function App() {
   return (
