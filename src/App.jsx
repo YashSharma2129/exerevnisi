@@ -4,8 +4,7 @@ import NameSignup from './components/NameSignup';
 import LandingPage from './components/landing/LandingPage'
 import Signin from './components/Signin';
 import NoticeBoard from './components/Notice/noticeboard';
-import Blog from "./components/blog/Blog.jsx";
-import Blog2 from './components/blog/blog2';
+import BlogPage from "./components/blog/Blog.jsx";
 
 function App() {
   return (
@@ -15,8 +14,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path='/noticeboard' element={<NoticeBoard />} />
         <Route path='/' element={<LandingPage />} />
-        <Route path='/blog' element={<Blog />} />
-        <Route path='/blog-old' element={<Blog2 />} />
+        <Route path='/blog' element={<BlogPage />} />
       </Routes>
     </Router>
   );
